@@ -68,7 +68,7 @@ public class PostagemController {
 		}
 		
 		@DeleteMapping("/{id}")
-		public ResponseEntity<Object> delete(@PathVariable long id) {
+		public ResponseEntity<?> delete(@PathVariable Long id) {
 			   return postagemRepository.findById(id)
 			           .map(resposta -> {
 			               postagemRepository.deleteById(id);
